@@ -50,5 +50,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: |
-        bash /app/update.sh
-        docker cp linode-docker:/app/update.sh /home/update.sh
+          echo "Pull new image"
+          docker cp linode-docker:/app/update.sh /home/update.sh
+          bash /home/update.sh
+        
