@@ -49,4 +49,6 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: bash /app/update.sh
+        script: |
+        bash /app/update.sh
+        docker cp linode-docker:/app/update.sh /home/update.sh
