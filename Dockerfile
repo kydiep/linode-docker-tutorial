@@ -6,6 +6,8 @@ COPY package*.json ./
 
 RUN npm install
 
+COPY update.sh /home/update.sh
+
 COPY . .
 
 ENV PORT=8080
